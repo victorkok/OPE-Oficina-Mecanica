@@ -99,6 +99,23 @@ def adcEstoque():
     print("Descricao:",linha2)
     formulario.codigo.setText("")
     formulario.quantidade.setText("")
+
+def listaprodutos():
+  listprod.show()
+  sql = 'SELECT * FROM Estoque'
+  mycursor.execute(sql)
+  myresult = mycursor.fetchall()
+  print(myresult)
+  listprod.tableWidget.setRowCount(len(myresult))
+  listprod.tableWidget.setColumnCount(5)
+
+  for x in range(0, len(myresult)):
+    for y in range(0,5):
+      listprod.tableWidget.setItem(x,y,QtWidgets.QTableWidgetItem(str(myresult[x][y])))
+      
+
+
+
     
     
 
@@ -115,6 +132,9 @@ formulario.button.clicked.connect(adcEstoque)
 #-----tela de remover estoque
 remov=uic.loadUi("Estoquer.ui")
 remov.buttonr.clicked.connect(removerEstoque)
+#-----tela de produtos
+listprod=uic.loadUi("list.ui")
+menu.button_produtos.clicked.connect(listaprodutos)
 
 app.exec()
 menu_principal()

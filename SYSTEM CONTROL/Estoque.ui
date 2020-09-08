@@ -50,7 +50,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 0);
+    <string notr="true">color: rgb(0, 0, 0);
 background-color: rgb(53, 100, 255);</string>
    </property>
    <property name="text">
@@ -79,7 +79,7 @@ background-color: rgb(53, 100, 255);</string>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 0);</string>
+    <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>Quantidade</string>
@@ -120,7 +120,7 @@ background-color: rgb(53, 100, 255);</string>
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 0);</string>
+    <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
     <string>ESTOCAR PRODUTO</string>
