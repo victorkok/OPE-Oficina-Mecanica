@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>835</width>
-    <height>643</height>
+    <width>833</width>
+    <height>638</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>50</x>
       <y>0</y>
-      <width>631</width>
+      <width>681</width>
       <height>81</height>
      </rect>
     </property>
@@ -39,7 +39,33 @@
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Remover Material</string>
+     <string>ADICIONAR MATERIAL</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="quantidade">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>340</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="codigo">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>200</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QLabel" name="Produto">
@@ -48,8 +74,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>180</y>
+      <x>190</x>
+      <y>200</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -74,7 +100,7 @@
 </string>
     </property>
     <property name="text">
-     <string>Codigo Produto</string>
+     <string>Codigo Material</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -83,8 +109,8 @@
    <widget class="QLabel" name="qtd">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>240</y>
+      <x>190</x>
+      <y>340</y>
       <width>101</width>
       <height>21</height>
      </rect>
@@ -108,24 +134,11 @@
      <enum>Qt::AutoText</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="quantidader">
+   <widget class="QPushButton" name="button">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>240</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="buttonr">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>300</y>
+      <x>270</x>
+      <y>400</y>
       <width>141</width>
       <height>71</height>
      </rect>
@@ -137,11 +150,100 @@
      <string>	✓</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="codigor">
+   <widget class="QLabel" name="Produto_2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>180</y>
+      <x>190</x>
+      <y>250</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gotham</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Material</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="produto">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>250</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Produto_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>290</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gotham</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Valor</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="valor">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>290</y>
       <width>121</width>
       <height>21</height>
      </rect>
@@ -156,7 +258,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>835</width>
+     <width>833</width>
      <height>21</height>
     </rect>
    </property>

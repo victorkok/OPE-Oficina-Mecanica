@@ -19,7 +19,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(53, 100, 255);</string>
+   <string notr="true">background-color: rgb(161, 188, 227);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -70,10 +70,10 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(55, 255, 25);</string>
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Adicionar Estoque</string>
+     <string>Editar Materiais</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_venda">
@@ -86,26 +86,42 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(55, 255, 25);</string>
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Realizar Venda</string>
+     <string>Remover Material</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button_produtos">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>380</y>
+      <x>240</x>
+      <y>370</y>
       <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(55, 255, 25);</string>
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Listar Produtos</string>
+     <string>Listar Material</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="material">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>370</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string>Adicionar Novo Material</string>
     </property>
    </widget>
   </widget>
