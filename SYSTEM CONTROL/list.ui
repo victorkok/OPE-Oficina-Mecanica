@@ -46,13 +46,39 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>110</y>
+      <y>210</y>
       <width>591</width>
-      <height>711</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pesquisa">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>139</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonp">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>140</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>🔎</string>
     </property>
    </widget>
   </widget>

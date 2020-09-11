@@ -18,18 +18,29 @@ mycursor.execute(quant)
 myresult = mycursor.fetchall()
 print(myresult[0][0]) #Devolve o INT da tabela
 
+def items_clear():
+  listprod.tableWidget.setRowCount(len(myresult))
+  listprod.tableWidget.setColumnCount(5)  
+  for y in range(0, len(myresult)):
+    for x in range(0,5):
+      listprod.tableWidget.setItem(y,x,QtWidgets.QTableWidgetItem(''))
 
 
-
-
+def chama_busca():
+  pesq = listprod.pesquisa.text()
+  busca(pesq) 
 
 
 def busca(x:str):
-  mycursor.execute("SELECT * FROM Estoque WHERE produto LIKE %s LIMIT 1", ("%" + x + "%",))
-
+  mycursor.execute("SELECT * FROM Estoque WHERE produto LIKE %s", ("%" + x + "%",))
+  myresult = mycursor.fetchall()
+  items_clear()
+  listprod.tableWidget.setRowCount(len(myresult))
+  listprod.tableWidget.setColumnCount(5)
+  for x in range(0, len(myresult)):
+    for y in range(0,5):
+      listprod.tableWidget.setItem(x,y,QtWidgets.QTableWidgetItem(str(myresult[x][y])))
   print(myresult) 
-
-  return myresult
 
 
 
@@ -158,6 +169,7 @@ remov.buttonr.clicked.connect(removerEstoque)
 #-----tela de produtos
 listprod=uic.loadUi("list.ui")
 menu.button_produtos.clicked.connect(listaprodutos)
+listprod.buttonp.clicked.connect(chama_busca)
 #-----tela de material
 adcmat=uic.loadUi("adcmaterial.ui")
 adcmat.button.clicked.connect(insert_service)
