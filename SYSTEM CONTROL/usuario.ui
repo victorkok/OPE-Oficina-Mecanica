@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>833</width>
-    <height>638</height>
+    <height>639</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,86 +17,35 @@
    <string notr="true">background-color: rgb(161, 188, 227);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>300</x>
       <y>0</y>
-      <width>681</width>
-      <height>81</height>
+      <width>341</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Mercado</family>
-      <pointsize>50</pointsize>
+      <pointsize>28</pointsize>
      </font>
     </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
-    </property>
     <property name="text">
-     <string>ADICIONAR MATERIAL</string>
+     <string>CRIAR CONTA</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="quantidade">
+   <widget class="QLineEdit" name="nome">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>270</y>
+      <y>160</y>
       <width>121</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="qtd">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>270</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Gotham</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>Quantidade</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>330</y>
-      <width>141</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(227, 227, 227);</string>
-    </property>
-    <property name="text">
-     <string>	✓</string>
     </property>
    </widget>
    <widget class="QLabel" name="Produto_2">
@@ -106,7 +55,7 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>180</y>
+      <y>200</y>
       <width>141</width>
       <height>21</height>
      </rect>
@@ -131,23 +80,64 @@
 </string>
     </property>
     <property name="text">
-     <string>Material</string>
+     <string>Usuario</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="produto">
+   <widget class="QLabel" name="Produto">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>160</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gotham</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Nome:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="usuario">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>180</y>
+      <y>200</y>
       <width>121</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
     </property>
    </widget>
    <widget class="QLabel" name="Produto_3">
@@ -157,8 +147,8 @@
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>220</y>
-      <width>141</width>
+      <y>250</y>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -182,23 +172,112 @@
 </string>
     </property>
     <property name="text">
-     <string>Valor</string>
+     <string>Senha</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="valor">
+   <widget class="QLineEdit" name="senha">
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>220</y>
+      <y>250</y>
       <width>121</width>
       <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Produto_4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>300</y>
+      <width>151</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Gotham</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Confirme a Senha</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="senhac">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>300</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Password</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>370</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(170, 255, 0);</string>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>340</y>
+      <width>251</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 21, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
