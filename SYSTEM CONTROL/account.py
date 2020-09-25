@@ -37,14 +37,19 @@ def check():
 
     if results:
         menu.show()
+        a = login.usuario.text()
+        bemVindo = "Bem vindo " + a
+        menu.bemVindo.setText(bemVindo)
+        login.hide()
     else:
         login.dados.setText("Dados não conferem")
 
 
 def addStock():
-    cursor = connection.cursor()
     connection = sqlite3.connect("Estoque.db")
+    cursor = connection.cursor()
     formulario.show()
+    menu.hide()
     global linha1
     global linha2
 
@@ -52,8 +57,9 @@ def addStock():
     linha2 = formulario.quantidade.text()
     sql = "UPDATE Estoque SET qtd = qtd + ? WHERE codigo = ?"
 
-    cursor.execute(sql,[quantidade,codigo])
+    cursor.execute(sql,[linha1,linha2])
     connection.commit()
+    
 
     print("Código:",linha1)
     print("Descricao:",linha2)
@@ -61,8 +67,10 @@ def addStock():
     formulario.quantidade.setText("")
 
 def removeStock():
-    cursor = connection.cursor()
+    
     connection = sqlite3.connect("Estoque.db")
+    cursor = connection.cursor()
+    menu.hide()
     remov.show()
     global linha1r
     global linha2r
@@ -70,14 +78,16 @@ def removeStock():
     linha1r = remov.codigor.text()
     linha2r = remov.quantidader.text()
     sql = "UPDATE Estoque SET qtd = qtd - ? WHERE codigo = ?"
-    cursor.execute(sql,[quantidade,codigo])
+    cursor.execute(sql,[linha1r,linha2r])
     connection.commit()
 
     print("Código:",linha1r)
     print("Descricao:",linha2r)
     remov.codigor.setText("")
     remov.quantidader.setText("")
-
+def showmat():
+    adcmat.show()
+    menu.hide
 def insert_service():
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
@@ -101,6 +111,7 @@ def insert_service():
 def listProducts():
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
+    menu.hide()
     listprod.show()
     sql = 'SELECT * FROM Estoque'
     cursor.execute(sql)
@@ -138,8 +149,21 @@ def search():
             listprod.tableWidget.setItem(x,y,QtWidgets.QTableWidgetItem(str(myresult[x][y])))
     print(myresult) 
 
+def logout():
+    menu.close()
+    login.show()
+    login.usuario.setText("")
+    login.senha.setText("")
+
+def back():
+    adcmat.hide()
+    listprod.hide()
+    remov.hide()
+    formulario.hide()
+    menu.show()
 
 
+    
 
 
 #-----tela de criação do usuario
@@ -152,30 +176,33 @@ login=uic.loadUi("user.ui")
 login.semconta.clicked.connect(createa.show)
 login.logar.clicked.connect(check)
 login.show()
-
 #-----tela de material
 adcmat=uic.loadUi("adcmaterial.ui")
 adcmat.button.clicked.connect(insert_service)
+adcmat.voltar.clicked.connect(back)
 
 #-----tela de produtos
 listprod=uic.loadUi("list.ui")
 listprod.buttonp.clicked.connect(search)
+listprod.voltar.clicked.connect(back)
 
 #-----tela de remover estoque
 remov=uic.loadUi("Estoquer.ui")
 remov.buttonr.clicked.connect(removeStock)
+remov.voltar.clicked.connect(back)
 
 #-----tela de adc estoque
 formulario=uic.loadUi("Estoque.ui")
 formulario.button.clicked.connect(addStock)
+formulario.voltar.clicked.connect(back)
 
 #menu princpal
 menu=uic.loadUi("menu_Principal.ui")
 menu.button_estoque.clicked.connect(addStock)
 menu.button_venda.clicked.connect(removeStock)
-menu.material.clicked.connect(adcmat.show)
+menu.material.clicked.connect(showmat)
 menu.button_produtos.clicked.connect(listProducts)
-
+menu.logout.clicked.connect(logout)
 
 
 
@@ -186,27 +213,8 @@ menu.button_produtos.clicked.connect(listProducts)
 
 app.exec()
 
+        
 
 
 
-'''connection = sqlite3.connect("accounts.db")
-
-cursor = connection.cursor()
-
-create_table = "CREATE TABLE IF NOT EXISTS user (cargo varchar(30), nome varchar(20), usuario varchar(30), senha varchar(30))"
-
-cursor.execute(create_table)
-
-tables = cursor.fetchall()
-
-connection = sqlite3.connect("Estoque.db")
-
-cursor = connection.cursor()
-
-create_table = "CREATE TABLE IF NOT EXISTS Estoque (codigo INTEGER PRIMARY KEY AUTOINCREMENT, produto varchar(30), valor decimal (5,2) not null, qtd int not null)"
-
-cursor.execute(create_table)
-
-tables = cursor.fetchall()
-'''
 

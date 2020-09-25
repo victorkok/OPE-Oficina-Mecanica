@@ -20,16 +20,16 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>0</y>
-      <width>341</width>
+      <x>270</x>
+      <y>40</y>
+      <width>141</width>
       <height>81</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Mercado</family>
-      <pointsize>50</pointsize>
+      <pointsize>25</pointsize>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -39,7 +39,7 @@
      <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Material</string>
+     <string>Materiais</string>
     </property>
    </widget>
    <widget class="QTableWidget" name="tableWidget">
@@ -85,7 +85,7 @@
    <widget class="QLineEdit" name="pesquisa">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>130</x>
       <y>139</y>
       <width>401</width>
       <height>31</height>
@@ -98,7 +98,7 @@
    <widget class="QPushButton" name="buttonp">
     <property name="geometry">
      <rect>
-      <x>460</x>
+      <x>540</x>
       <y>140</y>
       <width>41</width>
       <height>31</height>
@@ -106,6 +106,30 @@
     </property>
     <property name="text">
      <string>🔎</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="voltar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>104</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;--</string>
     </property>
    </widget>
   </widget>

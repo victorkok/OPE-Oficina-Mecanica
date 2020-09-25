@@ -22,23 +22,23 @@
    <string notr="true">background-color: rgb(161, 188, 227);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="bemVindo">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>0</y>
-      <width>551</width>
-      <height>121</height>
+      <x>300</x>
+      <y>520</y>
+      <width>201</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Mercado</family>
-      <pointsize>50</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="text">
-     <string>MENU PRINCIPAL</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -122,6 +122,30 @@
     </property>
     <property name="text">
      <string>Adicionar Novo Material</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="logout">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>0</y>
+      <width>104</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Logout</string>
     </property>
    </widget>
   </widget>
