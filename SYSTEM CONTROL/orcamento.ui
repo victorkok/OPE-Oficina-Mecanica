@@ -374,6 +374,15 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="echoMode">
+     <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="cpf">
     <property name="geometry">
@@ -505,6 +514,12 @@
     <property name="styleSheet">
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="currentText">
+     <string/>
+    </property>
    </widget>
    <widget class="QLineEdit" name="valor">
     <property name="geometry">
@@ -538,7 +553,7 @@
      <string>Agendar Serviço</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="cancel">
     <property name="geometry">
      <rect>
       <x>630</x>
@@ -560,7 +575,7 @@
      <string>❌</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="funilaria">
     <property name="geometry">
      <rect>
       <x>620</x>
@@ -578,7 +593,7 @@
      <string>Funilaria</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="pintura">
     <property name="geometry">
      <rect>
       <x>730</x>
@@ -611,6 +626,9 @@
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="maxLength">
+     <number>2</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="datames">
     <property name="geometry">
@@ -626,6 +644,9 @@
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="maxLength">
+     <number>2</number>
+    </property>
    </widget>
    <widget class="QLineEdit" name="dataano">
     <property name="geometry">
@@ -640,6 +661,9 @@
      <font>
       <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="maxLength">
+     <number>4</number>
     </property>
    </widget>
    <widget class="QLabel" name="label_22">
@@ -668,19 +692,35 @@
      <string>/</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QLabel" name="label_21">
     <property name="geometry">
      <rect>
-      <x>620</x>
-      <y>220</y>
-      <width>321</width>
-      <height>171</height>
+      <x>680</x>
+      <y>760</y>
+      <width>171</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>13</pointsize>
+      <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(170, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="descricao">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>220</y>
+      <width>311</width>
+      <height>171</height>
+     </rect>
     </property>
    </widget>
   </widget>

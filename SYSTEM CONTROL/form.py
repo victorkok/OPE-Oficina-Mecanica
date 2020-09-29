@@ -1,10 +1,33 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+from reportlab import *
 from datetime import date
 from PyQt5 import uic, QtWidgets
 from PyQt5.QtWidgets import *
 
 
+def verificador ():
+    nome = orca.nome.text()
+    cpf = orca.cpf.text()
+    rg = orca.rg.text()
+    telefone = orca.telefone.text()
+    endereco = orca.endereco.text()
+    cidade = orca.cidade.text()
+    bairro = orca.bairro.text()
+    modelo = orca.modelo.text()
+    marca = orca.marca.text()
+    ano = orca.ano.text()
+    placa = orca.placa.text()
+    valor = orca.valor.text()
+    cor = orca.cor.currentText()
+    desc = orca.descricao.toPlainText()
+
+    if nome and cpf and rg and telefone and endereco and cidade and bairro and modelo and marca and ano and placa and valor != "":
+        gerar_pdf()
+        orca.label_21.setText("PDF gerado")
+        orca.label_21.setStyleSheet("background-color: lightgreen")
+    else:
+        orca.label_21.setText("Confira seus Dados")
 def gerar_pdf():
     nome = orca.nome.text()
     cpf = orca.cpf.text()
@@ -18,6 +41,19 @@ def gerar_pdf():
     ano = orca.ano.text()
     placa = orca.placa.text()
     valor = orca.valor.text()
+    cor = orca.cor.currentText()
+    desc = orca.descricao.toPlainText()
+    dataDia = str(orca.datadia.text())
+    dataMes = str(orca.datames.text())
+    dataAno = str(orca.dataano.text())
+
+    dataRetirada = dataDia + '/' + dataMes + '/' + dataAno
+    
+
+    funilaria = orca.funilaria.isChecked()
+    pintura = orca.pintura.isChecked()
+
+
 
     global canvas
     canvas = canvas.Canvas(nome +".pdf", pagesize=letter)
@@ -29,7 +65,9 @@ def gerar_pdf():
     data_em_texto = str(data_em_texto)
 
 
-    
+    styles = getSampleStyleSheet()
+    text = Paragraph("long line",
+              styles['Normal'])
     canvas.setLineWidth(.3)
     canvas.setFont('Helvetica', 20)
 
@@ -57,7 +95,7 @@ def gerar_pdf():
     canvas.drawString(30,450, "Marca:" + marca)
     canvas.drawString(200,450, "Modelo:" + modelo.upper())
     canvas.drawString(390,450, "Ano:" + ano)
-    canvas.drawString(30,420, "Cor: ")
+    canvas.drawString(30,420, "Cor: " + cor)
     canvas.drawString(200,420, "Placa: " + placa.upper())
 
     #Informações do Serviço
@@ -65,18 +103,27 @@ def gerar_pdf():
     canvas.drawString(30,370,'Informações do Serviço')
     canvas.setFont('Helvetica', 12)
     canvas.drawString(30,340,'Descrição do Problema')
-    canvas.drawString(30,330,'')
-    canvas.drawString(30,200,'Realizar: ' )
+    canvas.drawString(30,320,desc)
     
+    if funilaria == True and pintura == True:
+        canvas.drawString(30,200,'Realizar : Funilaria e Pintura')
+    if funilaria == True and pintura == False:
+        canvas.drawString(30,200,'Realizar : Funilaria')
+    if funilaria == False and pintura == True:
+        canvas.drawString(30,200,'Realizar : Pintura')
 
-
-
+    canvas.drawString(30,110, 'Data da Retirada:')
+    canvas.drawString(30,90, str(dataRetirada))
+    canvas.drawString(500,110, 'VALOR:')
+    canvas.drawString(500,90, valor)
 
 
 
     canvas.setFont('Helvetica-Bold', 12)
     canvas.drawString(30,480,'Informações do Veiculo')
 
+
+    print(desc)
 
 
 
@@ -91,6 +138,7 @@ orca=uic.loadUi("orcamento.ui")
 lista = ["Prata","Preto","Cinza","Branco","Vermelho","Azul","Verde","Amarelo"]
 lista.sort()
 orca.cor.setEditable(True)
+orca.descricao.setWordWrapMode(3)
 cor = orca.cor.addItems(lista)
 
 nome = orca.nome.text()
@@ -105,7 +153,8 @@ marca = orca.marca.text()
 ano = orca.ano.text()
 placa = orca.placa.text()
 valor = orca.valor.text()
-orca.confirm.clicked.connect(gerar_pdf)
+orca.confirm.clicked.connect(verificador)
+orca.cancel.clicked.connect(orca.close)
 orca.show()
 
 app.exec()
