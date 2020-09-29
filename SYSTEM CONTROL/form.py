@@ -102,11 +102,11 @@ def gerar_pdf():
     y = 0
     z = 103
     h = 320
-    for x in range(5):
+    for x in range(6):
         canvas.drawString(30,h,desc[y:z])
-        y = z
-        z = z + z
-        h = h - 20
+        y = z + 1
+        z = z + 103
+        h = h-20
 
     
     if funilaria == True and pintura == True:
