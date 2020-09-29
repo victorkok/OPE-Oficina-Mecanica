@@ -65,10 +65,6 @@ def gerar_pdf():
     data_em_texto = str(data_em_texto)
 
 
-    styles = getSampleStyleSheet()
-    text = Paragraph("long line",
-              styles['Normal'])
-    canvas.setLineWidth(.3)
     canvas.setFont('Helvetica', 20)
 
     canvas.drawString(230,750,'OFICINA JACARANDAS')
@@ -103,7 +99,15 @@ def gerar_pdf():
     canvas.drawString(30,370,'Informações do Serviço')
     canvas.setFont('Helvetica', 12)
     canvas.drawString(30,340,'Descrição do Problema')
-    canvas.drawString(30,320,desc)
+    y = 0
+    z = 103
+    h = 320
+    for x in range(5):
+        canvas.drawString(30,h,desc[y:z])
+        y = z
+        z = z + z
+        h = h - 20
+
     
     if funilaria == True and pintura == True:
         canvas.drawString(30,200,'Realizar : Funilaria e Pintura')
