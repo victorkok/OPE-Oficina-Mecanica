@@ -7,14 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>834</width>
-    <height>640</height>
+    <height>668</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(161, 188, 227);</string>
+   <string notr="true">background-color : rgb(55, 57, 63);
+color: rgb(229, 229, 229);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -30,6 +31,9 @@
      <font>
       <pointsize>25</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
     </property>
     <property name="text">
      <string>LOGIN</string>
@@ -63,7 +67,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
+     <string notr="true">color: rgb(229, 229, 229);
 </string>
     </property>
     <property name="text">
@@ -101,8 +105,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-</string>
+     <string notr="true">color: rgb(229, 229, 229);</string>
     </property>
     <property name="text">
      <string>Senha:</string>
@@ -121,7 +124,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="senha">
@@ -134,7 +137,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -149,6 +152,9 @@
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
+    </property>
     <property name="text">
      <string>Logar</string>
     </property>
@@ -161,6 +167,9 @@
       <width>121</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>Não possui conta ?</string>

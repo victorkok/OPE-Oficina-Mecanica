@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(161, 188, 227);</string>
+   <string notr="true">background-color : rgb(55, 57, 63);
+color: rgb(229, 229, 229);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -32,7 +33,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">color: rgb(240, 240, 240);</string>
     </property>
     <property name="text">
      <string>Orçamento</string>
@@ -106,6 +107,9 @@
       <pointsize>12</pointsize>
       <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
     </property>
     <property name="text">
      <string>Informaçoes do Cliente</string>
@@ -289,6 +293,9 @@
       <underline>true</underline>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
+    </property>
     <property name="text">
      <string>Informaçoes do Serviço</string>
     </property>
@@ -325,6 +332,9 @@
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
+    </property>
     <property name="text">
      <string>Serviço</string>
     </property>
@@ -342,6 +352,9 @@
      <font>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
     </property>
     <property name="text">
      <string>Data da Retirada</string>
@@ -374,6 +387,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
     <property name="inputMask">
      <string/>
     </property>
@@ -393,6 +409,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="rg">
     <property name="geometry">
@@ -402,6 +421,9 @@
       <width>171</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="telefone">
@@ -413,6 +435,9 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="endereco">
     <property name="geometry">
@@ -422,6 +447,9 @@
       <width>181</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="cidade">
@@ -433,6 +461,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="bairro">
     <property name="geometry">
@@ -442,6 +473,9 @@
       <width>113</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="modelo">
@@ -453,6 +487,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="marca">
     <property name="geometry">
@@ -463,6 +500,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="ano">
     <property name="geometry">
@@ -472,6 +512,9 @@
       <width>91</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_20">
@@ -501,6 +544,9 @@
       <height>20</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
    </widget>
    <widget class="QComboBox" name="cor">
     <property name="geometry">
@@ -512,7 +558,8 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(229, 229, 229);
+background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="editable">
      <bool>false</bool>
@@ -529,6 +576,9 @@
       <width>101</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="confirm">
@@ -547,7 +597,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(137, 255, 167);</string>
+     <string notr="true">background-color: rgb(77, 143, 93);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Agendar Serviço</string>
@@ -569,7 +620,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 117, 117);</string>
+     <string notr="true">background-color: rgb(198, 91, 91);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>❌</string>
@@ -611,13 +663,13 @@
      <string>Pintura</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="data">
+   <widget class="QLineEdit" name="datadia">
     <property name="geometry">
      <rect>
       <x>620</x>
       <y>510</y>
-      <width>111</width>
-      <height>31</height>
+      <width>31</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="font">
@@ -626,8 +678,79 @@
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
     <property name="maxLength">
      <number>2</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="datames">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>510</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
+    <property name="maxLength">
+     <number>2</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dataano">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>510</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
+    </property>
+    <property name="maxLength">
+     <number>4</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_22">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>510</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_23">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>510</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>/</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_21">

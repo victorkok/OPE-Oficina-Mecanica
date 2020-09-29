@@ -19,7 +19,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(161, 188, 227);</string>
+   <string notr="true">background-color : rgb(55, 57, 63);
+color: rgb(229, 229, 229);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="bemVindo">
@@ -36,6 +37,9 @@
       <family>Mercado</family>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
     </property>
     <property name="text">
      <string/>
@@ -70,7 +74,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>Editar Materiais</string>
@@ -86,7 +90,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>Remover Material</string>
@@ -102,7 +106,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>Listar Material</string>
@@ -118,7 +122,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="text">
      <string>Adicionar Novo Material</string>
@@ -143,6 +147,9 @@
      <font>
       <pointsize>9</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>Logout</string>

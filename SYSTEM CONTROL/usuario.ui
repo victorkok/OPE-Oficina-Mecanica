@@ -14,7 +14,8 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(161, 188, 227);</string>
+   <string notr="true">background-color : rgb(55, 57, 63);
+color: rgb(229, 229, 229);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label_3">
@@ -31,6 +32,9 @@
       <pointsize>28</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(240, 240, 240);</string>
+    </property>
     <property name="text">
      <string>CRIAR CONTA</string>
     </property>
@@ -45,7 +49,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
    </widget>
    <widget class="QLabel" name="Produto_2">
@@ -76,8 +80,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-</string>
+     <string notr="true">color: rgb(229, 229, 229);</string>
     </property>
     <property name="text">
      <string>Usuario</string>
@@ -114,7 +117,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
+     <string notr="true">color: rgb(229, 229, 229);
 </string>
     </property>
     <property name="text">
@@ -134,7 +137,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
@@ -167,10 +170,6 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-</string>
-    </property>
     <property name="text">
      <string>Senha</string>
     </property>
@@ -188,7 +187,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -221,10 +220,6 @@
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-</string>
-    </property>
     <property name="text">
      <string>Confirme a Senha</string>
     </property>
@@ -242,7 +237,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(88, 92, 102);</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -258,7 +253,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(170, 255, 0);</string>
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>PushButton</string>
@@ -299,6 +294,9 @@
      <font>
       <pointsize>9</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
      <string>&lt;--</string>
