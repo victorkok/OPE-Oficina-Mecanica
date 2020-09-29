@@ -43,11 +43,9 @@ def gerar_pdf():
     valor = orca.valor.text()
     cor = orca.cor.currentText()
     desc = orca.descricao.toPlainText()
-    dataDia = str(orca.datadia.text())
-    dataMes = str(orca.datames.text())
-    dataAno = str(orca.dataano.text())
+    data = orca.data.text()
 
-    dataRetirada = dataDia + '/' + dataMes + '/' + dataAno
+
     
 
     funilaria = orca.funilaria.isChecked()
@@ -117,7 +115,7 @@ def gerar_pdf():
         canvas.drawString(30,200,'Realizar : Pintura')
 
     canvas.drawString(30,110, 'Data da Retirada:')
-    canvas.drawString(30,90, str(dataRetirada))
+    canvas.drawString(30,90, data)
     canvas.drawString(500,110, 'VALOR:')
     canvas.drawString(500,90, valor)
 
@@ -159,6 +157,15 @@ placa = orca.placa.text()
 valor = orca.valor.text()
 orca.confirm.clicked.connect(verificador)
 orca.cancel.clicked.connect(orca.close)
+orca.telefone.setInputMask('(00)00000-0000')
+orca.placa.setInputMask('AAA-0000')
+orca.cpf.setInputMask("000-000-000/00")
+orca.rg.setInputMask("00.000.000-0")
+orca.data.installEventFilter(orca.data.setInputMask('99/99/9999'))
+orca.data.setPlaceholderText('MM/DD/YYYY')
+orca.valor.setInputMask("009.99;_")
+
+
 orca.show()
 
 app.exec()

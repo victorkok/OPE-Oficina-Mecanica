@@ -611,13 +611,13 @@
      <string>Pintura</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="datadia">
+   <widget class="QLineEdit" name="data">
     <property name="geometry">
      <rect>
       <x>620</x>
       <y>510</y>
-      <width>31</width>
-      <height>20</height>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -628,68 +628,6 @@
     </property>
     <property name="maxLength">
      <number>2</number>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="datames">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>510</y>
-      <width>31</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="maxLength">
-     <number>2</number>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="dataano">
-    <property name="geometry">
-     <rect>
-      <x>740</x>
-      <y>510</y>
-      <width>41</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-     </font>
-    </property>
-    <property name="maxLength">
-     <number>4</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_22">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>510</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>/</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_23">
-    <property name="geometry">
-     <rect>
-      <x>720</x>
-      <y>510</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>/</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_21">
