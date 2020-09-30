@@ -151,6 +151,7 @@ def search():
 
 def logout():
     menu.close()
+    createa.close()
     login.show()
     login.usuario.setText("")
     login.senha.setText("")
@@ -163,6 +164,8 @@ def back():
     menu.show()
 
 
+
+
     
 
 
@@ -170,6 +173,7 @@ def back():
 app=QtWidgets.QApplication([])
 createa=uic.loadUi("usuario.ui")
 createa.button.clicked.connect(insertTable)
+createa.voltar.clicked.connect(logout)
 
 #tela de login
 login=uic.loadUi("user.ui")
