@@ -7,9 +7,18 @@ def insertTable():
     linha2 = createa.usuario.text()
     linha3 = createa.senha.text()
     linha4 = createa.senhac.text()
+    sql = "SELECT * FROM user WHERE usuario = ?"
+    cursor = connection.cursor()
+    cursor.execute(sql,[linha2])
+    results = cursor.fetchall()
+    print(results)
 
-    if linha3 != linha4:
+    if linha1 == '' or linha2 == '' or linha3 == '' or linha4 == '':
+        createa.label.setText("Preencha todos os campos")
+    elif linha3 != linha4:
         createa.label.setText("Senhas não conferem")
+    elif results != '':
+        createa.label.setText("Usuario ja existe")
     else:
         cursor = connection.cursor()
         sql = "INSERT INTO user(cargo,nome,usuario,senha) VALUES(?,?,?,?)"
@@ -34,15 +43,29 @@ def check():
     sql = ("SELECT * FROM user WHERE usuario = ? AND senha = ?")
     cursor.execute(sql,[usuario,senha])
     results = cursor.fetchall()
+    sql2 = 'SELECT senha FROM user WHERE usuario = ?'
+    cursor.execute(sql2,[usuario])
+    results2 = cursor.fetchall()
+    sql3 = 'SELECT usuario FROM user WHERE usuario = ?'
+    cursor.execute(sql3,[usuario])
+    results3 = cursor.fetchall()
+    print(results2)
 
-    if results:
-        menu.show()
-        a = login.usuario.text()
-        bemVindo = "Bem vindo " + a
-        menu.bemVindo.setText(bemVindo)
-        login.hide()
+    if usuario == '' or senha == '':
+        login.dados.setText("Preencha todos os campos")
     else:
-        login.dados.setText("Dados não conferem")
+        if results:
+            menu.show()
+            a = login.usuario.text()
+            bemVindo = "Bem vindo " + a
+            menu.bemVindo.setText(bemVindo)
+            login.hide()
+        elif results3 != []:
+            if senha != results2[0]:
+                login.dados.setText("Senha Incorreta")
+        elif results3 == []:
+            login.dados.setText("Usuario não existe")
+
 
 
 def addStock():
@@ -57,7 +80,7 @@ def addStock():
     linha2 = formulario.quantidade.text()
     sql = "UPDATE Estoque SET qtd = qtd + ? WHERE codigo = ?"
 
-    cursor.execute(sql,[linha1,linha2])
+    cursor.execute(sql,[linha2,linha1])
     connection.commit()
     
 
@@ -78,7 +101,7 @@ def removeStock():
     linha1r = remov.codigor.text()
     linha2r = remov.quantidader.text()
     sql = "UPDATE Estoque SET qtd = qtd - ? WHERE codigo = ?"
-    cursor.execute(sql,[linha1r,linha2r])
+    cursor.execute(sql,[linha2r,linha1r])
     connection.commit()
 
     print("Código:",linha1r)
@@ -137,7 +160,7 @@ def search():
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
     pesq = listprod.pesquisa.text() 
-    sql ="SELECT * FROM Estoque WHERE produto LIKE ?"
+    sql ="SELECT * FROM Estoque WHERE codigo LIKE ?"
     pesq = '%' + pesq + '%'
     cursor.execute(sql,[pesq])
     myresult = cursor.fetchall()
