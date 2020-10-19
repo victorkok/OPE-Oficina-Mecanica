@@ -17,7 +17,7 @@ def insertTable():
         createa.label.setText("Preencha todos os campos")
     elif linha3 != linha4:
         createa.label.setText("Senhas não conferem")
-    elif results != '':
+    elif results == '':
         createa.label.setText("Usuario ja existe")
     else:
         cursor = connection.cursor()
@@ -66,6 +66,54 @@ def check():
         elif results3 == []:
             login.dados.setText("Usuario não existe")
 
+def editStock():
+    connection = sqlite3.connect("Estoque.db")
+    cursor = connection.cursor()
+    edit.show()
+    menu.hide()
+    edit.editmat.clear()
+    edit.removemat.clear()
+    sql = "SELECT Produto FROM Estoque"
+    cursor.execute(sql)
+    myresult = cursor.fetchall()
+    mat = [item for t in myresult for item in t]
+
+    for i in range(0,len(mat)):
+        print(mat[i])
+        if edit.editmat.findData(i) != mat[i]:
+            edit.editmat.insertItem(i,mat[i])
+            edit.removemat.insertItem(i,mat[i])
+
+
+    connection.close()
+    edit.valor.setText("")
+    edit.quantidade.setText("")
+
+def adicionaMat():
+    connection = sqlite3.connect("Estoque.db")
+    cursor = connection.cursor()
+
+    produto = edit.editmat.currentText()
+
+    valor = edit.valor.text()
+    qtd = edit.quantidade.text()
+    sql = "UPDATE Estoque SET valor = ? , qtd = ? WHERE produto = ?"
+    if valor != "" or qtd != "" :
+        cursor.execute(sql,[valor,qtd,produto])
+        connection.commit()
+        connection.close()
+    
+def removeMat():
+    connection = sqlite3.connect("Estoque.db")
+    cursor = connection.cursor()
+
+    produto = edit.removemat.currentText()
+
+    sql = "DELETE FROM Estoque WHERE produto = ?;"
+    cursor.execute(sql,[produto])
+    connection.commit()
+    editStock()
+    connection.close()
 
 
 def addStock():
@@ -184,6 +232,7 @@ def back():
     listprod.hide()
     remov.hide()
     formulario.hide()
+    edit.hide()
     menu.show()
 
 
@@ -223,14 +272,20 @@ formulario=uic.loadUi("Estoque.ui")
 formulario.button.clicked.connect(addStock)
 formulario.voltar.clicked.connect(back)
 
+#-----tela de editar material
+edit=uic.loadUi("editarmaterial.ui")
+edit.button.clicked.connect(adicionaMat)
+edit.button_2.clicked.connect(removeMat)
+edit.voltar.clicked.connect(back)
+
 #menu princpal
 menu=uic.loadUi("menu_Principal.ui")
 menu.button_estoque.clicked.connect(addStock)
 menu.button_venda.clicked.connect(removeStock)
+menu.button_estoque_2.clicked.connect(editStock)
 menu.material.clicked.connect(showmat)
 menu.button_produtos.clicked.connect(listProducts)
 menu.logout.clicked.connect(logout)
-
 
 
 
