@@ -14,25 +14,26 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(161, 188, 227);</string>
+   <string notr="true">background-color : rgb(55, 57, 63);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>10</y>
-      <width>171</width>
+      <x>400</x>
+      <y>0</y>
+      <width>201</width>
       <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Mercado</family>
       <pointsize>25</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Orçamento</string>
@@ -43,14 +44,18 @@
      <rect>
       <x>20</x>
       <y>170</y>
-      <width>47</width>
-      <height>13</height>
+      <width>61</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Nome:</string>
@@ -61,14 +66,18 @@
      <rect>
       <x>210</x>
       <y>170</y>
-      <width>47</width>
-      <height>13</height>
+      <width>41</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>CPF</string>
@@ -79,14 +88,18 @@
      <rect>
       <x>20</x>
       <y>240</y>
-      <width>81</width>
-      <height>16</height>
+      <width>111</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Endereco</string>
@@ -97,15 +110,19 @@
      <rect>
       <x>20</x>
       <y>110</y>
-      <width>171</width>
+      <width>251</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Mercado</family>
+      <pointsize>14</pointsize>
       <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Informaçoes do Cliente</string>
@@ -116,14 +133,18 @@
      <rect>
       <x>220</x>
       <y>240</y>
-      <width>61</width>
+      <width>81</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Bairro</string>
@@ -140,8 +161,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Cidade</string>
@@ -152,14 +177,18 @@
      <rect>
       <x>310</x>
       <y>310</y>
-      <width>81</width>
+      <width>111</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Telefone</string>
@@ -170,15 +199,19 @@
      <rect>
       <x>20</x>
       <y>520</y>
-      <width>171</width>
+      <width>281</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Mercado</family>
+      <pointsize>14</pointsize>
       <underline>true</underline>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Informaçoes do Veiculo</string>
@@ -195,8 +228,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Marca</string>
@@ -213,8 +250,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Modelo</string>
@@ -231,8 +272,12 @@
     </property>
     <property name="font">
      <font>
+      <family>Arial</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Cor</string>
@@ -243,17 +288,21 @@
      <rect>
       <x>170</x>
       <y>630</y>
-      <width>131</width>
+      <width>51</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Arial</family>
       <pointsize>12</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string>Placa do Veiculo</string>
+     <string>Placa</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_18">
@@ -261,14 +310,18 @@
      <rect>
       <x>680</x>
       <y>690</y>
-      <width>171</width>
+      <width>211</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Data da Retirada</string>
@@ -285,8 +338,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Ano</string>
@@ -368,8 +425,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>E-mail</string>
@@ -380,14 +441,18 @@
      <rect>
       <x>200</x>
       <y>390</y>
-      <width>141</width>
+      <width>231</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Arial</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Confirmar E-mail</string>
@@ -398,14 +463,18 @@
      <rect>
       <x>320</x>
       <y>630</y>
-      <width>131</width>
+      <width>41</width>
       <height>16</height>
      </rect>
     </property>
     <property name="font">
      <font>
+      <family>Arial</family>
       <pointsize>12</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>KM</string>
@@ -422,8 +491,12 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <family>Mercado</family>
+      <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>CEP</string>
@@ -583,7 +656,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QLineEdit" name="placa">
@@ -617,6 +690,33 @@
       <width>111</width>
       <height>31</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="voltar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>104</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;--</string>
     </property>
    </widget>
   </widget>
