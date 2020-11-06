@@ -25,10 +25,11 @@ def funcao_pincipal():
 
     cursor = connection.cursor()
     sql = "INSERT INTO Clientes(nome_completo,email,telefone,sexo) VALUES(?,?,?,?)"
-    cursor.execute(sql,[linha1,linha2,linha3,sexo])
-    connection.commit()
 
-    connection.close()
+    if linha1 != "" or linha2 != "" or linha3 != "":
+        cursor.execute(sql,[linha1,linha2,linha3,sexo])
+        connection.commit()
+        connection.close()
 
     cadastro.lineEdit.setText("")
     cadastro.lineEdit_2.setText("")

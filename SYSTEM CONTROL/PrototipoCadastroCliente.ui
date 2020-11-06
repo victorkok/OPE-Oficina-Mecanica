@@ -181,7 +181,7 @@ color: rgb(229, 229, 229);
      <string notr="true">color: rgb(229, 229, 229)</string>
     </property>
     <property name="text">
-     <string>Sexo</string>
+     <string>Gênero</string>
     </property>
    </widget>
    <widget class="QRadioButton" name="radioButton">
@@ -293,6 +293,30 @@ color: rgb(229, 229, 229);</string>
     </property>
     <property name="text">
      <string>Visualizar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="voltar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>104</width>
+      <height>46</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;--</string>
     </property>
    </widget>
   </widget>

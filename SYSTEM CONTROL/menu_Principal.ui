@@ -28,7 +28,7 @@ color: rgb(229, 229, 229);</string>
      <rect>
       <x>300</x>
       <y>520</y>
-      <width>201</width>
+      <width>271</width>
       <height>71</height>
      </rect>
     </property>
@@ -64,43 +64,11 @@ color: rgb(229, 229, 229);</string>
      <string>O que deseja fazer ?</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_estoque">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>310</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
-    </property>
-    <property name="text">
-     <string>Editar Materiais</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_venda">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>310</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
-    </property>
-    <property name="text">
-     <string>Remover Material</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="button_produtos">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>370</y>
+      <x>250</x>
+      <y>360</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -115,8 +83,8 @@ color: rgb(229, 229, 229);</string>
    <widget class="QPushButton" name="material">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>370</y>
+      <x>450</x>
+      <y>300</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -158,8 +126,8 @@ color: rgb(229, 229, 229);</string>
    <widget class="QPushButton" name="button_estoque_2">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>430</y>
+      <x>250</x>
+      <y>300</y>
       <width>141</width>
       <height>31</height>
      </rect>
@@ -168,7 +136,39 @@ color: rgb(229, 229, 229);</string>
      <string notr="true">background-color: rgb(81, 85, 94);</string>
     </property>
     <property name="text">
-     <string>Novo Editar Materiais</string>
+     <string>Editar Material</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_orca">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>360</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
+    </property>
+    <property name="text">
+     <string>Realizar Orçamento</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_cadastro">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>420</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 85, 94);</string>
+    </property>
+    <property name="text">
+     <string>Cadastrar Clientes</string>
     </property>
    </widget>
   </widget>

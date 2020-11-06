@@ -1,5 +1,15 @@
 from PyQt5 import uic, QtWidgets
 import sqlite3
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from reportlab import *
+from datetime import date
+from PyQt5.QtWidgets import *
+from PyPDF2 import PdfFileWriter, PdfFileReader
+import io
+from reportlab.lib.units import cm, mm, inch, pica
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 
 def insertTable():
     connection = sqlite3.connect("accounts.db")
@@ -89,6 +99,64 @@ def editStock():
     edit.valor.setText("")
     edit.quantidade.setText("")
 
+
+def cadastraCliente():
+    cadastro.show()
+    menu.hide()
+    linha1 = cadastro.lineEdit.text()
+    linha2 = cadastro.lineEdit_2.text()
+    linha3 = cadastro.lineEdit_3.text()
+
+    if cadastro.radioButton_2.isChecked():
+        print("Sexo Masculino foi selecionado")
+        sexo = "Masculino"
+    elif cadastro.radioButton.isChecked():
+        print("Sexo Feminino foi selecionado")
+        sexo = "Feminino"
+    elif cadastro.radioButton_3.isChecked():
+        print("Sexo Outro foi selecionado")
+        sexo = "Outro"
+
+    print("Nome:",linha1)
+    print("Email:",linha2)
+    print("Telefone:",linha3)
+
+    connection = sqlite3.connect("cliente.db")
+
+    cursor = connection.cursor()
+    sql = "INSERT INTO Clientes(nome_completo,email,telefone,sexo) VALUES(?,?,?,?)"
+
+    if linha1 != "" or linha2 != "" or linha3 != "":
+        cursor.execute(sql,[linha1,linha2,linha3,sexo])
+        connection.commit()
+        connection.close()
+
+    cadastro.lineEdit.setText("")
+    cadastro.lineEdit_2.setText("")
+    cadastro.lineEdit_3.setText("")
+
+
+def chama_lista():
+    listaCadastro.show()
+    menu.hide()
+
+    connection = sqlite3.connect("cliente.db")
+    cursor = connection.cursor()
+    sql = "SELECT * FROM Clientes"
+    cursor.execute(sql)
+    tabela = cursor.fetchall()
+    print(tabela)
+    listaCadastro.tableWidget.setRowCount(len(tabela))
+    listaCadastro.tableWidget.setColumnCount(5)
+
+    for i in range(0,len(tabela)):
+        for x in range(0,5):
+            listaCadastro.tableWidget.setItem(i,x,QtWidgets.QTableWidgetItem(str(tabela[i][x])))
+
+    connection.close()
+
+
+
 def adicionaMat():
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
@@ -116,7 +184,7 @@ def removeMat():
     connection.close()
 
 
-def addStock():
+'''def addStock():
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
     formulario.show()
@@ -135,9 +203,9 @@ def addStock():
     print("Código:",linha1)
     print("Descricao:",linha2)
     formulario.codigo.setText("")
-    formulario.quantidade.setText("")
+    formulario.quantidade.setText("")'''
 
-def removeStock():
+'''def removeStock():
     
     connection = sqlite3.connect("Estoque.db")
     cursor = connection.cursor()
@@ -155,7 +223,7 @@ def removeStock():
     print("Código:",linha1r)
     print("Descricao:",linha2r)
     remov.codigor.setText("")
-    remov.quantidader.setText("")
+    remov.quantidader.setText("")'''
 def showmat():
     adcmat.show()
     menu.hide
@@ -230,15 +298,150 @@ def logout():
 def back():
     adcmat.hide()
     listprod.hide()
-    remov.hide()
-    formulario.hide()
     edit.hide()
+    orca.hide()
+    cadastro.hide()
+    listaCadastro.hide()
+
     menu.show()
+    
+
+
+def gerar_pdf():
+    nome = orca.nome.text()
+    cpf = orca.cpf.text()
+    endereco = orca.endereco.text()
+    bairro = orca.bairro.text()
+    cidade = orca.cidade.text()
+    cep = orca.cep.text()
+    telefone = orca.telefone.text()
+    email = orca.email.text()
+    email2 = orca.email_2.text()
+    modelo = orca.modelo.text()
+    marca = orca.marca.text()
+    ano = orca.ano.text()
+    placa = orca.placa.text()
+    km = orca.km.text()
+    data = orca.data.text()
+    cor = orca.cor.currentText()
+
+
+    data_atual = date.today()
+
+    data_em_texto = '{}/{}/{}'.format(data_atual.day, data_atual.month,
+    data_atual.year)
+    data_em_texto = str(data_em_texto)
+
+    pdfmetrics.registerFont(TTFont('Times-New-Roman',
+    'c:\\windows\\fonts\\times.ttf'))
+    pdfmetrics.registerFont(TTFont('Times-New-RomanBd',
+    'c:\\windows\\fonts\\timesBd.ttf'))
+    pdfmetrics.registerFont(TTFont('Times-New-RomanIt',
+    'c:\\windows\\fonts\\timesI.ttf'))
+    pdfmetrics.registerFont(TTFont('Times-New-RomanBI',
+    'c:\\windows\\fonts\\timesBI.ttf'))
+
+    packet = io.BytesIO()
+    # Veiculo
+    can = canvas.Canvas(packet, pagesize=letter)
+    can.setFont('Times-New-Roman', 12)
+    #Modelo
+    can.drawString(72, 701, modelo.upper())
+    #Marca
+    can.drawString(72, 687, marca.upper())
+    #Cor
+    can.drawString(55, 673, cor)
+    #Ano
+    can.drawString(202, 701, ano)
+    #Placa
+    can.drawString(208, 687, placa.upper())
+    #Km
+    can.drawString(200, 673, km +' Km')
+    #Data da Retirada
+    can.drawString(500, 701, data)
 
 
 
+    #Cliente
+    can.setFont('Times-New-Roman', 10)
+    #Nome
+    can.drawString(70, 191, nome.title())
+    #CPF
+    can.drawString(83, 181, cpf)
+    #Endereço
+    can.drawString(73, 168, endereco.title())
+    #Bairro
+    can.drawString(65, 157, bairro.title())
+    #Telefone
+    can.drawString(75, 146, telefone)
+    #Email
+    can.drawString(65, 134, email)
+    #Cidade
+    can.drawString(385, 191, cidade.title())
+    #CEP
+    can.drawString(375, 181, cep)
+
+
+
+
+
+
+
+
+
+    can.save()
+
+    #move to the beginning of the StringIO buffer
+    packet.seek(0)
+    new_pdf = PdfFileReader(packet)
+    # read your existing PDF
+    existing_pdf = PdfFileReader(open("system_control_mecanica_666.pdf", "rb"))
+    output = PdfFileWriter()
+    # add the "watermark" (which is the new pdf) on the existing page
+    page = existing_pdf.getPage(0)
+    page.mergePage(new_pdf.getPage(0))
+    output.addPage(page)
+    # finally, write "output" to a real file
+    outputStream = open(nome +".pdf", "wb")
+    output.write(outputStream)
+    outputStream.close()
+
+
+
+
+
+def verificador ():
+    nome = orca.nome.text()
+    cpf = orca.cpf.text()
+    endereco = orca.endereco.text()
+    bairro = orca.bairro.text()
+    cidade = orca.cidade.text()
+    cep = orca.cep.text()
+    telefone = orca.telefone.text()
+    email = orca.email.text()
+    email2 = orca.email_2.text()
+    modelo = orca.modelo.text()
+    marca = orca.marca.text()
+    ano = orca.ano.text()
+    placa = orca.placa.text()
+    km = orca.km.text()
+    data = orca.data.text()
+
+    if email != email2:
+        orca.label_21.setText("Emails não conferem")
+    elif nome and cpf and endereco and telefone and cidade and bairro and cep and modelo and marca and ano and placa and km and email and email2 and data != "":
+        gerar_pdf()
+        orca.label_21.setText("PDF gerado")
+        orca.label_21.setStyleSheet("background-color: lightgreen")
+    else:
+        orca.label_21.setText("Confira seus Dados")
 
     
+
+
+
+
+
 
 
 #-----tela de criação do usuario
@@ -246,6 +449,7 @@ app=QtWidgets.QApplication([])
 createa=uic.loadUi("usuario.ui")
 createa.button.clicked.connect(insertTable)
 createa.voltar.clicked.connect(logout)
+
 
 #tela de login
 login=uic.loadUi("user.ui")
@@ -262,15 +466,15 @@ listprod=uic.loadUi("list.ui")
 listprod.buttonp.clicked.connect(search)
 listprod.voltar.clicked.connect(back)
 
-#-----tela de remover estoque
+'''#-----tela de remover estoque
 remov=uic.loadUi("Estoquer.ui")
 remov.buttonr.clicked.connect(removeStock)
-remov.voltar.clicked.connect(back)
+remov.voltar.clicked.connect(back)'''
 
-#-----tela de adc estoque
+'''#-----tela de adc estoque
 formulario=uic.loadUi("Estoque.ui")
 formulario.button.clicked.connect(addStock)
-formulario.voltar.clicked.connect(back)
+formulario.voltar.clicked.connect(back)'''
 
 #-----tela de editar material
 edit=uic.loadUi("editarmaterial.ui")
@@ -278,14 +482,57 @@ edit.button.clicked.connect(adicionaMat)
 edit.button_2.clicked.connect(removeMat)
 edit.voltar.clicked.connect(back)
 
+orca=uic.loadUi("orcamento.ui")
+
+#-----tela de cadastrar clientes
+cadastro=uic.loadUi("PrototipoCadastroCliente.ui")
+cadastro.pushButton.clicked.connect(cadastraCliente)
+cadastro.pushButton_2.clicked.connect(chama_lista)
+cadastro.voltar.clicked.connect(back)
+
+#-----lista de clientes
+listaCadastro=uic.loadUi("PrototipoListaClientes.ui")
+listaCadastro.voltar.clicked.connect(back)
+
+
+lista = ["Prata","Preto","Cinza","Branco","Vermelho","Azul","Verde","Amarelo"]
+lista.sort()
+orca.cor.setEditable(True)
+cor = orca.cor.addItems(lista)
+
+nome = orca.nome.text()
+cpf = orca.cpf.text()
+endereco = orca.endereco.text()
+bairro = orca.bairro.text()
+cidade = orca.cidade.text()
+cep = orca.cep.text()
+telefone = orca.telefone.text()
+email = orca.email.text()
+email2 = orca.email_2.text()
+modelo = orca.modelo.text()
+marca = orca.marca.text()
+ano = orca.ano.text()
+placa = orca.placa.text()
+km = orca.km.text()
+orca.confirm.clicked.connect(verificador)
+orca.cancel.clicked.connect(orca.close)
+orca.telefone.setInputMask('(00)00000-0000')
+orca.placa.setInputMask('AAA-0000')
+orca.cpf.setInputMask("000-000-000/00")
+orca.data.installEventFilter(orca.data.setInputMask('99/99/9999'))
+orca.data.setPlaceholderText('MM/DD/YYYY')
+orca.cep.setInputMask('00000-000')
+orca.km.setInputMask('000000')
+orca.ano.setInputMask('0000')
+orca.voltar.clicked.connect(back)
 #menu princpal
 menu=uic.loadUi("menu_Principal.ui")
-menu.button_estoque.clicked.connect(addStock)
-menu.button_venda.clicked.connect(removeStock)
 menu.button_estoque_2.clicked.connect(editStock)
 menu.material.clicked.connect(showmat)
 menu.button_produtos.clicked.connect(listProducts)
 menu.logout.clicked.connect(logout)
+menu.button_orca.clicked.connect(orca.show)
+menu.button_cadastro.clicked.connect(cadastraCliente)
 
 
 
