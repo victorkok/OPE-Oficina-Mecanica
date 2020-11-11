@@ -22,85 +22,6 @@
   <property name="sizeGripEnabled">
    <bool>false</bool>
   </property>
-  <widget class="QLabel" name="Produto">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>250</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Gotham</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="statusTip">
-    <string/>
-   </property>
-   <property name="autoFillBackground">
-    <bool>false</bool>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);
-</string>
-   </property>
-   <property name="text">
-    <string>Codigo Material</string>
-   </property>
-   <property name="textFormat">
-    <enum>Qt::AutoText</enum>
-   </property>
-  </widget>
-  <widget class="QLabel" name="qtd">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>310</y>
-     <width>101</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Gotham</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
-     <italic>false</italic>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 0, 0);</string>
-   </property>
-   <property name="text">
-    <string>Quantidade</string>
-   </property>
-   <property name="textFormat">
-    <enum>Qt::AutoText</enum>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="quantidade">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>310</y>
-     <width>121</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -123,36 +44,7 @@
     <string notr="true">color: rgb(0, 0, 0);</string>
    </property>
    <property name="text">
-    <string>ESTOCAR MATERIAL</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="codigo">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>250</y>
-     <width>121</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="button">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>370</y>
-     <width>141</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(227, 227, 227);</string>
-   </property>
-   <property name="text">
-    <string>	✓</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;ESTOCAR MATERIAL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="voltar">
@@ -172,12 +64,126 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>9</pointsize>
+     <pointsize>16</pointsize>
     </font>
    </property>
-   <property name="text">
-    <string>&lt;--</string>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);</string>
    </property>
+   <property name="text">
+    <string>←</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>250</y>
+     <width>270</width>
+     <height>85</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="Produto">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Codigo Material:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="codigo">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="qtd">
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Quantidade:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="quantidade">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QPushButton" name="button">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 255, 127);</string>
+      </property>
+      <property name="text">
+       <string>Confirmar </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

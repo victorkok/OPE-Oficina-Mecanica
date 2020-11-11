@@ -11,11 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SystemControlMecânica </string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color : rgb(55, 57, 63);
-color: rgb(229, 229, 229);</string>
+   <string notr="true">background-color: rgb(161, 188, 227);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -37,10 +36,10 @@ color: rgb(229, 229, 229);</string>
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(240, 240, 240);</string>
+     <string notr="true">color: rgb(0, 0, 0);</string>
     </property>
     <property name="text">
-     <string>Remover Material</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Remover Material&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="Produto">
@@ -49,10 +48,10 @@ color: rgb(229, 229, 229);</string>
     </property>
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>280</x>
       <y>180</y>
-      <width>141</width>
-      <height>21</height>
+      <width>131</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="font">
@@ -70,8 +69,18 @@ color: rgb(229, 229, 229);</string>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
     <property name="text">
-     <string>Codigo Produto</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Codigo Produto&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -80,10 +89,10 @@ color: rgb(229, 229, 229);</string>
    <widget class="QLabel" name="qtd">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>240</y>
+      <x>310</x>
+      <y>210</y>
       <width>101</width>
-      <height>21</height>
+      <height>23</height>
      </rect>
     </property>
     <property name="font">
@@ -95,8 +104,17 @@ color: rgb(229, 229, 229);</string>
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
     <property name="text">
-     <string>Quantidade</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Quantidade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="textFormat">
      <enum>Qt::AutoText</enum>
@@ -105,43 +123,51 @@ color: rgb(229, 229, 229);</string>
    <widget class="QLineEdit" name="quantidader">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>240</y>
-      <width>121</width>
-      <height>21</height>
+      <x>410</x>
+      <y>210</y>
+      <width>71</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(88, 92, 102);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
    <widget class="QPushButton" name="buttonr">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>300</y>
-      <width>141</width>
-      <height>71</height>
+      <x>330</x>
+      <y>280</y>
+      <width>121</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
+     <string notr="true">background-color: rgb(85, 255, 127);</string>
     </property>
     <property name="text">
-     <string>	✓</string>
+     <string>Confirmar</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="codigor">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>410</x>
       <y>180</y>
-      <width>121</width>
-      <height>21</height>
+      <width>71</width>
+      <height>23</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(88, 92, 102);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="voltar">
@@ -161,14 +187,27 @@ color: rgb(229, 229, 229);</string>
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>&lt;--</string>
+     <string>←</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>250</y>
+      <width>251</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>

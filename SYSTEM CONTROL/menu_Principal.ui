@@ -16,11 +16,12 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SystemControlMecânica</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color : rgb(55, 57, 63);
-color: rgb(229, 229, 229);</string>
+color: rgb(229, 229, 229);
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="bemVindo">
@@ -45,57 +46,6 @@ color: rgb(229, 229, 229);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>260</x>
-      <y>200</y>
-      <width>331</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Mercado</family>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>O que deseja fazer ?</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_produtos">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>360</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
-    </property>
-    <property name="text">
-     <string>Listar Material</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="material">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>300</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(88, 92, 102);</string>
-    </property>
-    <property name="text">
-     <string>Adicionar Novo Material</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="logout">
     <property name="geometry">
      <rect>
@@ -117,59 +67,110 @@ color: rgb(229, 229, 229);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
+     <string notr="true">
+background-color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
      <string>Logout</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="button_estoque_2">
+   <widget class="QSplitter" name="splitter">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>300</y>
-      <width>141</width>
-      <height>31</height>
+      <x>280</x>
+      <y>160</y>
+      <width>244</width>
+      <height>291</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
     </property>
-    <property name="text">
-     <string>Editar Material</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_orca">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>360</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
-    </property>
-    <property name="text">
-     <string>Realizar Orçamento</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_cadastro">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>420</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
-    </property>
-    <property name="text">
-     <string>Cadastrar Clientes</string>
-    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;O que deseja fazer ?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_cadastro">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(81, 85, 94);</string>
+     </property>
+     <property name="text">
+      <string>Cadastrar Clientes</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="material">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(88, 92, 102);</string>
+     </property>
+     <property name="text">
+      <string>Adicionar Material</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_estoque_2">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(81, 85, 94);</string>
+     </property>
+     <property name="text">
+      <string>Editar Material</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_produtos">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(81, 85, 94);</string>
+     </property>
+     <property name="text">
+      <string>Listar Material</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_orca">
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(81, 85, 94);</string>
+     </property>
+     <property name="text">
+      <string>Realizar Orçamento</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

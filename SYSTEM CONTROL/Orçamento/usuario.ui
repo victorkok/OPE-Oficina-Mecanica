@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SystemControlMecânica - Criar Conta</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color : rgb(55, 57, 63);</string>
@@ -20,9 +20,9 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>0</y>
-      <width>341</width>
+      <x>260</x>
+      <y>60</y>
+      <width>231</width>
       <height>51</height>
      </rect>
     </property>
@@ -35,241 +35,25 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>CRIAR CONTA</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="nome">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>160</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="maxLength">
-     <number>20</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Produto_2">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>200</y>
-      <width>141</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Gotham</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Usuario</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Produto">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>160</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Gotham</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Nome:</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="usuario">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>200</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="maxLength">
-     <number>30</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Normal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Produto_3">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>250</y>
-      <width>151</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Gotham</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Senha</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="senha">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>250</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="maxLength">
-     <number>30</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="Produto_4">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>300</y>
-      <width>151</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Gotham</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="statusTip">
-     <string/>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Confirme a Senha</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="senhac">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>300</y>
-      <width>121</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="maxLength">
-     <number>30</number>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt; color:#ffffff;&quot;&gt;CRIAR CONTA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="button">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>370</y>
-      <width>111</width>
-      <height>51</height>
+      <x>320</x>
+      <y>320</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(81, 85, 94);</string>
+     <string notr="true">background-color: rgb(85, 255, 127);</string>
     </property>
     <property name="text">
      <string>Criar conta</string>
@@ -278,8 +62,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>340</y>
+      <x>140</x>
+      <y>280</y>
       <width>251</width>
       <height>16</height>
      </rect>
@@ -308,15 +92,238 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>&lt;--</string>
+     <string>←</string>
     </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>280</y>
+      <width>511</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>160</y>
+      <width>291</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="Produto">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Gotham</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Nome:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nome">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="maxLength">
+        <number>20</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="Produto_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Gotham</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Usuario:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="usuario">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Normal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="Produto_3">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Gotham</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Senha:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="senha">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="Produto_4">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <family>Gotham</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="statusTip">
+        <string/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Confirme a Senha:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="senhac">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="maxLength">
+        <number>30</number>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

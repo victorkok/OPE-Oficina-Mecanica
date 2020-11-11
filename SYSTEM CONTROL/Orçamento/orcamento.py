@@ -22,7 +22,6 @@ def gerar_pdf():
     cep = orca.cep.text()
     telefone = orca.telefone.text()
     email = orca.email.text()
-    email2 = orca.email_2.text()
     modelo = orca.modelo.text()
     marca = orca.marca.text()
     ano = orca.ano.text()
@@ -125,7 +124,6 @@ def verificador ():
     cep = orca.cep.text()
     telefone = orca.telefone.text()
     email = orca.email.text()
-    email2 = orca.email_2.text()
     modelo = orca.modelo.text()
     marca = orca.marca.text()
     ano = orca.ano.text()
@@ -133,9 +131,8 @@ def verificador ():
     km = orca.km.text()
     data = orca.data.text()
 
-    if email != email2:
-        orca.label_21.setText("Emails não conferem")
-    elif nome and cpf and endereco and telefone and cidade and bairro and cep and modelo and marca and ano and placa and km and email and email2 and data != "":
+    
+    if nome and cpf and endereco and telefone and cidade and bairro and cep and modelo and marca and ano and placa and km and email and data != "":
         gerar_pdf()
         orca.label_21.setText("PDF gerado")
         orca.label_21.setStyleSheet("background-color: lightgreen")
@@ -173,7 +170,6 @@ cidade = orca.cidade.text()
 cep = orca.cep.text()
 telefone = orca.telefone.text()
 email = orca.email.text()
-email2 = orca.email_2.text()
 modelo = orca.modelo.text()
 marca = orca.marca.text()
 ano = orca.ano.text()
