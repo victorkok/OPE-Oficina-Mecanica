@@ -10,6 +10,17 @@ import io
 from reportlab.lib.units import cm, mm, inch, pica
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import webbrowser
+
+def link_formulário():
+    new=2
+    url = "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAKr1vGZUQk1IRlJUUk04VlJONUswQkxVMkVHNFpEMS4u"
+    webbrowser.open(url,new=new)
+
+def link_detran():
+    new=2
+    url = "http://www.detran.sp.gov.br/wps/portal/portaldetran/cidadao/veiculos/servicos/pesquisaDebitosRestricoesVeiculos"
+    webbrowser.open(url,new=new)
 
 def insertTable():
     connection = sqlite3.connect("accounts.db")
@@ -98,64 +109,6 @@ def editStock():
     connection.close()
     edit.valor.setText("")
     edit.quantidade.setText("")
-
-
-def cadastraCliente():
-    cadastro.show()
-    menu.hide()
-    linha1 = cadastro.lineEdit.text()
-    linha2 = cadastro.lineEdit_2.text()
-    linha3 = cadastro.lineEdit_3.text()
-
-    if cadastro.radioButton_2.isChecked():
-        print("Sexo Masculino foi selecionado")
-        sexo = "Masculino"
-    elif cadastro.radioButton.isChecked():
-        print("Sexo Feminino foi selecionado")
-        sexo = "Feminino"
-    elif cadastro.radioButton_3.isChecked():
-        print("Sexo Outro foi selecionado")
-        sexo = "Outro"
-
-    print("Nome:",linha1)
-    print("Email:",linha2)
-    print("Telefone:",linha3)
-
-    connection = sqlite3.connect("cliente.db")
-
-    cursor = connection.cursor()
-    sql = "INSERT INTO Clientes(nome_completo,email,telefone,sexo) VALUES(?,?,?,?)"
-
-    if linha1 != "" or linha2 != "" or linha3 != "":
-        cursor.execute(sql,[linha1,linha2,linha3,sexo])
-        connection.commit()
-        connection.close()
-
-    cadastro.lineEdit.setText("")
-    cadastro.lineEdit_2.setText("")
-    cadastro.lineEdit_3.setText("")
-
-
-def chama_lista():
-    listaCadastro.show()
-    menu.hide()
-
-    connection = sqlite3.connect("cliente.db")
-    cursor = connection.cursor()
-    sql = "SELECT * FROM Clientes"
-    cursor.execute(sql)
-    tabela = cursor.fetchall()
-    print(tabela)
-    listaCadastro.tableWidget.setRowCount(len(tabela))
-    listaCadastro.tableWidget.setColumnCount(5)
-
-    for i in range(0,len(tabela)):
-        for x in range(0,5):
-            listaCadastro.tableWidget.setItem(i,x,QtWidgets.QTableWidgetItem(str(tabela[i][x])))
-
-    connection.close()
-
-
 
 def adicionaMat():
     connection = sqlite3.connect("Estoque.db")
@@ -300,9 +253,6 @@ def back():
     listprod.hide()
     edit.hide()
     orca.hide()
-    cadastro.hide()
-    listaCadastro.hide()
-
     menu.show()
     
 
@@ -425,7 +375,7 @@ def verificador ():
     km = orca.km.text()
     data = orca.data.text()
 
-    
+
     if nome and cpf and endereco and telefone and cidade and bairro and cep and modelo and marca and ano and placa and km and email and data != "":
         gerar_pdf()
         orca.label_21.setText("PDF gerado")
@@ -481,16 +431,6 @@ edit.voltar.clicked.connect(back)
 
 orca=uic.loadUi("orcamento.ui")
 
-#-----tela de cadastrar clientes
-cadastro=uic.loadUi("PrototipoCadastroCliente.ui")
-cadastro.pushButton.clicked.connect(cadastraCliente)
-cadastro.pushButton_2.clicked.connect(chama_lista)
-cadastro.voltar.clicked.connect(back)
-
-#-----lista de clientes
-listaCadastro=uic.loadUi("PrototipoListaClientes.ui")
-listaCadastro.voltar.clicked.connect(back)
-
 
 lista = ["Prata","Preto","Cinza","Branco","Vermelho","Azul","Verde","Amarelo"]
 lista.sort()
@@ -528,9 +468,8 @@ menu.material.clicked.connect(showmat)
 menu.button_produtos.clicked.connect(listProducts)
 menu.logout.clicked.connect(logout)
 menu.button_orca.clicked.connect(orca.show)
-menu.button_cadastro.clicked.connect(cadastraCliente)
-
-
+menu.button_orca_2.clicked.connect(link_formulário)
+menu.button_orca_3.clicked.connect(link_detran)
 
 
 
