@@ -381,6 +381,7 @@ def verificador ():
         orca.label_21.setText("PDF gerado")
         orca.label_21.setStyleSheet("background-color: lightgreen")
     else:
+        orca.label_21.setStyleSheet("background-color: red")
         orca.label_21.setText("Confira seus Dados")
 
     
