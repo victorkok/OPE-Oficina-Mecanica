@@ -35,7 +35,7 @@ color: rgb(229, 229, 229);
     </property>
     <property name="font">
      <font>
-      <family>Mercado</family>
+      <family>MS Shell Dlg 2</family>
       <pointsize>16</pointsize>
      </font>
     </property>
@@ -108,19 +108,6 @@ background-color: rgb(170, 0, 0);</string>
       </property>
       <property name="margin">
        <number>0</number>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="button_cadastro">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(81, 85, 94);</string>
-      </property>
-      <property name="text">
-       <string>Cadastrar Clientes</string>
       </property>
      </widget>
      <widget class="QPushButton" name="material">
